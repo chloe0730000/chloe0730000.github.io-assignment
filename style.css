@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.alignleft {
+    float: left;
+}
+
+ul {
+    float: right;
+}
+
+ul.title-item li {
+    display: inline;
+    padding: 5px;
+}
+
+.container {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #64F7EE;
+    width: 100%;
+    height: 300px;
+    font-size: 40px;
+    text-align: center;
+    /* use the line-height property with a value that is equal to the height property to center the div element */
+    line-height: 300px;
+    clear: both;
+}
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 20px;
+    width: 1200px;
+}
+
+
+table td {
+    border: 1px solid #888888;
+}
+
+
+.img-size {
+    display: block;
+    width: 100%;
+}
+
+.img-title {
+    display: block;
+    background-color: #ADD8E6;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+@media screen and (min-width:601px) and (max-width:1200px) {
+    table {
+        width: 90%;
+        border-collapse: collapse;
+    }
+
+    td {
+        display: inline-block;
+        width: 49%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    table {
+        width: 90%;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+}
