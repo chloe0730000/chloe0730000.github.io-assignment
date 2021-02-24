@@ -21,6 +21,12 @@ ul.title-item li {
     padding: 5px;
 }
 
+.menu-img {
+    display: none;
+    width: 30px;
+    float: right;
+}
+
 .container {
     display: inline-block;
     margin-top: 10px;
@@ -74,6 +80,7 @@ table td {
         margin: 0 auto;
         margin-top: 20px;
     }
+
 }
 
 
@@ -87,6 +94,14 @@ table td {
         width: 100%;
         margin: 0 auto;
         margin-top: 20px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .menu-img {
+        display: inline-block;
     }
 
 }
