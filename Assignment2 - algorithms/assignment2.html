@@ -36,12 +36,13 @@
 
     // Q3
     function maxProduct(nums){
-    res = 0;
     for (i=0;i<nums.length;i++){
         for (j=0; j<nums.length; j++){
         if (i!=j && i<j){
             res_new = nums[i]*nums[j];
-            if (res_new>res){
+            if (typeof res == "undefined"){
+                var res = res_new;
+            }else if (res_new>res){
                 res = res_new;
             }
         }
@@ -52,7 +53,7 @@
 
     console.log(maxProduct([5, 20, 2, 6]));
     console.log(maxProduct([10, -20, 0, 3]));
-
+    console.log(maxProduct([-1,10]));
 
     // Q4
     function twoSum(nums, target){
