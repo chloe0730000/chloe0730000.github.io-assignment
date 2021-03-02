@@ -1,4 +1,4 @@
-fr# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Spyder Editor
 
@@ -96,8 +96,8 @@ def twoSum(nums, target):
                     return [i,j]
     #return final_list.sum()
 
-            
-print(twoSum([2, 11, 7, 15], 9))
+result = twoSum([2, 11, 7, 15], 9)
+print(result)
 
 
 
