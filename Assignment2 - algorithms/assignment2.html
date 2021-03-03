@@ -8,8 +8,8 @@
 
     // Q1
     function calculate(min, max){
-        res = 0;
-        for (i=min; i<max+1; i++){
+        let res = 0;
+        for (let i=min; i<max+1; i++){
             res+=i;
         }
         return res;
@@ -20,11 +20,11 @@
 
     // Q2
     function avg(data){
-        name_cnt = 0;
-        salary_sum = 0;
-        for (i=0; i<data["employees"].length; i++){
-            name = data["employees"][i]["name"];
-            salary = data["employees"][i]["salary"];
+        let name_cnt = 0;
+        let salary_sum = 0;
+        for (let i=0; i<data["employees"].length; i++){
+            let name = data["employees"][i]["name"];
+            let salary = data["employees"][i]["salary"];
             name_cnt+=1
             salary_sum+=salary
         }
@@ -36,19 +36,21 @@
 
     // Q3
     function maxProduct(nums){
-    for (i=0;i<nums.length;i++){
-        for (j=0; j<nums.length; j++){
-        if (i!=j && i<j){
-            res_new = nums[i]*nums[j];
-            if (typeof res == "undefined"){
-                var res = res_new;
-            }else if (res_new>res){
-                res = res_new;
+        let res_new;
+        let  res;
+        for (let i=0;i<nums.length;i++){
+            for (let j=0; j<nums.length; j++){
+            if (i!=j && i<j){
+                res_new = nums[i]*nums[j];
+                if (typeof res == "undefined"){
+                    res = res_new;
+                }else if (res_new>res){
+                    res = res_new;
+                }
+            }
             }
         }
-        }
-    }
-    return res;
+        return res;
     }
 
     console.log(maxProduct([5, 20, 2, 6]));
@@ -57,17 +59,19 @@
 
     // Q4
     function twoSum(nums, target){
-    for (i=0; i<nums.length;i++){
-        for (j=0; j<nums.length; j++){
-        if (i!=j && i<j){
-            res = nums[i]+nums[j];
-            if (res==target){
-            bundle_loc = [i,j];
+        let res;
+        let bundle_loc;
+        for (let i=0; i<nums.length;i++){
+            for (let j=0; j<nums.length; j++){
+            if (i!=j && i<j){
+                let res = nums[i]+nums[j];
+                if (res==target){
+                bundle_loc = [i,j];
+                }
+            }
             }
         }
-        }
-    }
-    return bundle_loc;
+        return bundle_loc;
     }
     result = twoSum([2, 11, 7, 15], 9)
     console.log(result);
@@ -75,9 +79,9 @@
 
     // Q5
     function maxZeros(nums){
-        count=0;
-        res=0;
-        for (i=0; i<nums.length;i++){
+        let count=0;
+        let res=0;
+        for (let i=0; i<nums.length;i++){
             if (nums[i]==0){
                 count+=1;
                 if (count>res){
