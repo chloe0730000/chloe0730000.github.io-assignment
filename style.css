@@ -42,6 +42,7 @@ ul.title-item li {
 
 
 table {
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 20px;
@@ -49,14 +50,17 @@ table {
 }
 
 
-table td {
+td {
     border: 1px solid #888888;
+    width: 25%;
 }
 
 
 .img-size {
     display: block;
     width: 100%;
+    /* height: auto; */
+    height: 260px;
 }
 
 .img-title {
@@ -64,7 +68,10 @@ table td {
     background-color: #ADD8E6;
     text-align: center;
     padding: 5px;
+    /* word-wrap: break-word; */
 }
+
+
 
 
 
@@ -78,7 +85,7 @@ table td {
         display: inline-block;
         width: 49%;
         margin: 0 auto;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
 }
@@ -93,7 +100,7 @@ table td {
         display: block;
         width: 100%;
         margin: 0 auto;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     ul {
