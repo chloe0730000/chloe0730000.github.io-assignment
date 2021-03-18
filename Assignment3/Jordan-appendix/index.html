@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">  
+        <span class="alignleft">My Website</span>
+        <img src="iconfinder_Menu_2290865.png" class="menu-img" >  
+        <ul class="title-item">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+
+    <div class="container">Welcome to MyHome</div>
+    
+
+    <table>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+                
+            </td>
+
+        </tr>
+        <tr style="display:none;" class="load_tr">
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+        </tr>
+        <tr style="display:none;" class="load_tr">
+            <td>
+                
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               
+            </td>
+            <td>
+                
+            </td>
+            
+        </tr>
+    </table>
+    <div style="text-align:center;">
+        <button id="load_btn">load more</button>
+    </div>
+</body>
+</html>
+
+<script>
+    var request = new XMLHttpRequest();
+    var JsonData="";
+    request.open('GET', 'https://padax.github.io/taipei-day-trip-resources/taipei-attractions.json', true);
+
+    request.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+    // Success!
+        JsonData = JSON.parse(this.response);
+        var matchestableelements = document.querySelectorAll("td");
+        for(let i = 0; i < matchestableelements.length; i++){
+            let imgelement = document.createElement("img");
+            imgelement.src = JsonData.result.results[i].file.split("jpg")[0]+"jpg";
+            imgelement.className = "img-size";
+            matchestableelements[i].appendChild(imgelement);
+
+            let titleelement = document.createElement("div");
+            titleelement.textContent = JsonData.result.results[i].stitle;
+            titleelement.className = "img-title";
+            matchestableelements[i].appendChild(titleelement);
+        }
+  } else {
+    // We reached our target server, but it returned an error
+
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+
+
+document.getElementById("load_btn").addEventListener("click",function(){
+    let matchestd=document.getElementsByClassName("load_tr");
+    for(let i=0;i<matchestd.length;i++){
+        matchestd[i].style.display="table-row";
+    }
+});
+</script>
