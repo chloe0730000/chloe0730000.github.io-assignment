@@ -40,13 +40,13 @@ Q2
 
      select * from user;
 
-     ![1](1.png)
+     ![1](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/1.png)
 
    * 使用 SELECT 指令取得 user 資料表中總共有幾筆資料 
 
      select count(*) from user;
 
-     ![2](2.png)
+     ![2](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/2.png)
 
    * 使用 SELECT 指令取得所有在 user 資料表中的使用者資料，並按照 time 欄位，由近 
 
@@ -54,7 +54,7 @@ Q2
 
      select * from user order by time desc;
 
-     ![3](3.png)
+     ![3](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/3.png)
 
      
 
@@ -72,19 +72,19 @@ Q2
 
      where rn in (2,3,4);
 
-     ![4](4.png)
+     ![4](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/4.png)
 
    * 使用 SELECT 指令取得欄位 username 是 ply 的使用者資料。 
 
      select * from user where username='ply';
 
-     ![5](5.png)
+     ![5](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/5.png)
 
    * 使用 SELECT 指令取得欄位 username 是 ply、且欄位 password 也是 ply 的資料。 
 
      select * from user where username='ply' and password='ply';
 
-     ![6](6.png)
+     ![6](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/6.png)
 
    * 使用 UPDATE 指令更新欄位 username 是 ply 的使用者資料，將資料中的 name 欄位 
 
@@ -92,7 +92,7 @@ Q2
 
      update user set name='丁滿' where username='ply';
 
-     ![7](7.png)
+     ![7](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/7.png)
 
    * 使用 DELETE 指令刪除所有在 user 資料表中的資料 
 
@@ -134,7 +134,7 @@ Q4
 
 * select * from message;
 
-  ![8](8.png)
+  ![8](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/8.png)
 
   
 
@@ -146,7 +146,7 @@ Q4
 
   join message as m on u.id = m.user_id;
 
-  ![9](9.png)
+  ![9](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/9.png)
 
 * 使用 SELECT 搭配 JOIN 的語法，取得 user 資料表中欄位 username 是 ply 的所有留 
 
@@ -158,7 +158,7 @@ Q4
 
   where username='ply';
 
-  ![10](10.png)
+  ![10](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/10.png)
 
 
 
