@@ -70,8 +70,18 @@ Q2
 
      where rn in (2,3,4);
 
-     ![4](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/4.png)
+    ![4](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/4.png)
 
+
+     select * 
+     from user 
+     order by time desc 
+     limit 3 offset 1;
+
+    ![4-1](https://github.com/chloe0730000/chloe0730000.github.io-assignment/blob/main/Assignment5%20-%20mysql/screenshots/4-1.png)
+
+
+ 
    * 使用 SELECT 指令取得欄位 username 是 ply 的使用者資料。 
 
      select * from user where username='ply';
