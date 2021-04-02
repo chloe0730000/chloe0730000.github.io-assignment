@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/Assignment 6/static/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">歡迎光臨，請註冊登入系統</div>
+    <div class="content">註冊帳號</div>
+    <div class="register">
+        <form action="/signup" method="POST">
+            姓名 <input type="text" name="re_name">
+            <br>
+            <br>
+            帳號 <input type="text" name="re_account">
+            <br>
+            <br>
+            密碼 <input type="password" name="re_pass">
+            <br>
+            <br>
+            <button>註冊</button>
+        </form>
+        <br>
+        <br>
+        <hr>
+    <div class="content">登入系統</div>
+    <div class="login">
+        <form action="/signin", method="POST">
+            帳號 <input type="text" name="account">
+            <br>
+            <br>
+            密碼 <input type="password" name="pass">
+            <br>
+            <br>
+            <button>登入</button>
+        </form>
+    </div>
+</body>
+</html>
