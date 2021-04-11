@@ -8,7 +8,7 @@ try:
     db_connection = connect(
         host= "localhost",
         user= "root",
-        password= "test", # need to change
+        password= "Chloe951753@",
         database="website")
     print(db_connection)
 except Error as e:
@@ -70,6 +70,7 @@ def login():
         try:
              if len(res)>0:
                 session["user"] = res['name']
+                session["username"] = res['username']
                 return redirect(url_for("success_page"))
         except:
             return redirect(url_for('error_page', message="帳號或密碼輸入錯誤"))
@@ -106,27 +107,24 @@ def api():
     useraccount = request.args.get("username")
     db_cursor = db_connection.cursor(buffered=True , dictionary=True) # extract value of specific column
     
+    json_data = {}
     if useraccount:
         sql = "select id, name, username from user where username='"+useraccount+"'"
+        db_cursor.execute(sql)
+        res = db_cursor.fetchone()
+        json_data = {"data":res}
+
+        # res = list(db_cursor.fetchall()) 
+        # json_data = {}
+        # json_data["data"] = res[0]
     else:
-        sql = "select id, name, username from user"
-
-    db_cursor.execute(sql)
-    res = list(db_cursor.fetchall()) 
-
-
-    json_data = {}
-    if len(res)==1:
-        json_data["data"] = res[0]
-    elif len(res)>1:
-        json_data["data"] = res
-    else:
+        json_data = {}
         json_data["data"]="null"
-
+    
     return json.dumps(json_data)
 
-
-
+    db_cursor.execute(sql)
+    
 
 
 app.run(port=3000)
