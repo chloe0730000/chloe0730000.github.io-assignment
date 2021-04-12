@@ -113,17 +113,12 @@ def api():
         db_cursor.execute(sql)
         res = db_cursor.fetchone()
         json_data = {"data":res}
-
-        # res = list(db_cursor.fetchall()) 
-        # json_data = {}
-        # json_data["data"] = res[0]
     else:
         json_data = {}
         json_data["data"]="null"
     
     return json.dumps(json_data)
 
-    db_cursor.execute(sql)
     
 
 
